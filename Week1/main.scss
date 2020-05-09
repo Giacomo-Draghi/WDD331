@@ -115,11 +115,3 @@ img {
 figure{
     text-align: center;
 }
-
-/* Media Query for medium + screens */
-@media only screen and (min-width: 1022px) {
-    body div {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    }
-}
