@@ -1,3 +1,10 @@
+// variables
+
+$blu-color: #6495ED;
+$brown-color: #FAEBD7;
+$browner-color: #DEB887;
+
+
 @import url('https://fonts.googleapis.com/css?family=Lora&display=swap');
 
 body {
@@ -14,7 +21,7 @@ h1 {
 }
 
 header {
-    background-color: #6495ED;
+    background-color: $blu-color;
     text-align: right;
     padding: 2%;
 }
@@ -28,15 +35,15 @@ nav ul {
 
 a {
     text-decoration: none;
-    color: #FAEBD7;
+    color: $brown-color;
 }
 
 header {
     a:visited {
-       color: #FAEBD7; 
+       color: $brown-color; 
     }
     a:active {
-        color: #DEB887;
+        color: $browner-color;
     }
     a:hover {
         text-decoration: underline;
@@ -44,7 +51,7 @@ header {
 }
 
 main {
-    background-color: #FAEBD7;
+    background-color: $brown-color;
     padding: 2%;
     padding-top: 5%;
     article {
@@ -61,17 +68,17 @@ main {
             text-decoration: none;
             color: black;
             a:hover{
-                color: #6495ED;
+                color: $blu-color;
                 text-decoration: underline;
             }
         }
     }
     a {
         text-decoration: none;
-        color: #6495ED;
+        color: $blu-color;
     }
     a:active {
-        color: #DEB887;
+        color: $browner-color;
     }
     a:hover{
         text-decoration: underline;
