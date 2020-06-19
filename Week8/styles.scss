@@ -1,0 +1,120 @@
+@import 'typography';
+@import 'icons';
+
+$sm-break: 48em;
+// colors
+$dark-gray: #727272;
+$med-gray: #b4b3b5;
+$light-gray: #eaeaea;
+$body-font: #020202;
+$link-blue: #0076b6; //why do we have both of these blues?
+$byui-blue: #056cb6;
+
+// Utility classes
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.site-banner {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 2em;
+  background-color: $link-blue;
+    div:nth-child(4){
+      grid-column:1/6;
+      margin: 0;
+    }
+    .site-banner__left{
+      background-color: black;
+      height: 100%;
+      margin: 0 auto;
+      margin-left: 0;
+    }
+    .site-banner__right{
+      grid-column:3/6;
+      text-align: right;
+      margin: 0;
+    }
+    .site-banner__bottom{
+      background-color: $light-gray;
+      padding: 0;
+      border: solid 1px $dark-gray;
+      text-align: end;
+      h1.BYUI{
+        margin:0;
+        padding: 10px;
+        width: calc(100% - 80px);
+      }
+      a{
+        line-height: normal;
+        font-size: 20px;
+        font-weight: 300;
+        margin: 0;
+        color: $dark-gray;
+      }
+    }
+    div {
+      padding: 2%;
+      padding-top: 4%;
+      height: 60px;
+      a {
+        font-size: 30px;
+        color: #fff;
+      }
+    }
+    form { 
+      padding: 2%;
+      display: none;
+      div  {
+        align-items: stretch;
+        display: inline-flex;
+        vertical-align: middle;
+        width: 100%;
+        button{
+          background-color: #68ad44;
+          border: 1px solid #83bd42;
+          border-left: none;
+          color: #fff;
+          cursor: pointer;
+          flex: 0 1 auto;
+          position: relative;
+          padding-left: .8em;
+          padding-right: .8em;
+        }
+        input{
+          background-color: #fff;
+          background-clip: padding-box;
+          border: 1px solid #c6c7c8;
+          border-right: none;
+          color: #525352;
+          display: block;
+          font-family: "BYUI Open Sans","Open Sans","Lucida Sans Unicode","Lucida Grande",Verdana,sans-serif;
+          font-size: 15px;
+          height: 30px;
+          line-height: 1.5;
+          padding: 6px 10px;
+        }
+      }
+    }
+}
