@@ -1,7 +1,7 @@
 @import 'typography';
 @import 'icons';
 
-$sm-break: 48em;
+$break-small : 800px;
 // colors
 $dark-gray: #727272;
 $med-gray: #b4b3b5;
@@ -120,6 +120,8 @@ a {
 .wraper {
   display: grid;
   grid-template-columns: 1fr;
+  row-gap: 0.5em;
+  margin-top: 0.5em;
     .top-left {
       display: grid;
       grid-template-columns: 1fr;
@@ -127,8 +129,10 @@ a {
       margin-top: 0.5em; 
         .main-banner{
           text-align: center;
+          margin: 0 auto;
+        width: 95%;
           img {
-            width: 95%;
+            width: 100%;
           }
         }
         div {
@@ -142,22 +146,200 @@ a {
             img{
               width: 100%;
             }
-            a{
-              width: 100%;
-              color: $byui-blue;
-              border: 1px solid $med-gray;
-                h3{
-                  display: grid;
-                  grid-template-columns: 1fr 1fr;
-                  font-weight: 100;
-                  font-size: 20px;
-                  margin: 0;
-                  padding: 3px;
-                }
-                span{
-                  margin-left: 93%;
-                }
-            }
-        }
+          }
+      }
+}
+
+a.pointing-link{
+  width: 100%;
+  color: $byui-blue;
+  border: 1px solid $med-gray;
+    h3{
+      font-weight: 100;
+      font-size: 20px;
+      margin: 0;
+      padding: 3px;
+      display: flow-root;
     }
+    span{
+      float: right;
+    }
+}
+
+.top-right{
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 0.5em;
+    div {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+   a {
+    padding: 6px 15px;
+    background-color: lighten( $light-gray, 10% );
+    border-top: none;
+   }
+   a:hover{
+    background-color: $light-gray;
+   }
+   .info .grey h3{
+     font-weight: 600;
+     font-size: 15px;
+   }
+   h2{
+     margin-bottom: 0;
+     border: 1px solid $dark-gray;
+     background-color: $dark-gray;
+     color: #fff;
+     font-size: 25px;
+     font-weight: 200;
+     padding: 6px 15px;
+   }
+
+   div.info a {
+     border: 1px solid $dark-gray;
+     border-radius: 5px;
+     background-color: $light-gray;
+     color: $body-font;
+   }
+   .dates {
+     h2{
+      color: #fff;
+     background-color: $byui-blue;
+     border: none;
+     }
+     .list a {
+      display: grid;
+      grid-template-columns: 1fr 1fr 4fr;
+      text-align: center;
+      background-color: transparent;
+      border-bottom: 1px solid $med-gray;
+      color: $body-font;
+        .col-1{
+          font-weight: 600;
+        }
+        .col-3 {
+          display: flex;
+        }
+     }
+     .list a:hover{
+       background-color: $light-gray;
+       color: $link-blue;
+
+     }
+   }
+}
+
+.bottom-left{
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 1.4em;
+  
+  img {
+    display: none;
+  }
+  div.box{
+    border-top: 1px solid $med-gray;
+    .article {
+      div {
+        margin-top: 1em;
+        margin-bottom: 0.5em;
+        font-size: 12px;
+      }
+      a  {
+        font-size: 20px;
+        font-weight: 600;
+        color: $link-blue;
+      }
+      p {
+        color: $body-font;
+      }
+    }
+  }
+  .button{ 
+    float: right;
+    margin-top: 1.4em;
+    a{
+      color: #fff;
+      font-weight: 600;
+      background-color: $byui-blue;
+      border: 1px solid $byui-blue;
+      border-radius: 5px;
+      padding: 5px 30px;
+    }
+  }
+}
+
+.bottom-right{
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 1.4em;
+  img {
+    width: 100%;
+    padding: 10px;
+  }
+  .university-message{
+    border: 1px solid $med-gray;
+    border-radius: 5px;
+    h3{
+      margin: 0;
+      padding:10px;
+      background-color: $light-gray;
+      border-bottom: 1px solid $med-gray;
+    }
+  }
+}
+
+@media (min-width: $break-small){
+  .site-banner {
+    .site-banner__left{
+      margin-left: 5%;
+    }
+    .site-banner__right{
+      margin-right: 5%;
+    }
+    .site-banner__bottom{
+      text-align: start;
+    }
+  }
+  .wraper{
+    width: 95%;
+    margin: 0 auto;
+    grid-template-columns: 2fr 1fr;
+    .top-left{
+      .side-banner{
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 0.5em;
+        margin-top: 0.5em;
+      }
+    }
+    .top-right {
+      .links{
+        h2{
+          margin-top: 0.5em;
+        }
+      }
+    }
+    .bottom-left{
+      .box {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        column-gap: 1em;
+        padding-top: 2em;
+        .article {
+          div {
+            margin-top: 0;
+          }
+        }
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  }
+  
+  
 }

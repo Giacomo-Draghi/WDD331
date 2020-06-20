@@ -853,16 +853,20 @@ a {
 
 .wraper {
   display: grid;
-  grid-template-columns: 1fr; }
+  grid-template-columns: 1fr;
+  row-gap: 0.5em;
+  margin-top: 0.5em; }
   .wraper .top-left {
     display: grid;
     grid-template-columns: 1fr;
     row-gap: 0.5em;
     margin-top: 0.5em; }
     .wraper .top-left .main-banner {
-      text-align: center; }
+      text-align: center;
+      margin: 0 auto;
+      width: 95%; }
       .wraper .top-left .main-banner img {
-        width: 95%; }
+        width: 100%; }
     .wraper .top-left div {
       margin: 0 auto; }
     .wraper .top-left .side-banner {
@@ -872,18 +876,142 @@ a {
       width: 95%; }
       .wraper .top-left .side-banner img {
         width: 100%; }
-      .wraper .top-left .side-banner a {
-        width: 100%;
-        color: #056cb6;
-        border: 1px solid #b4b3b5; }
-        .wraper .top-left .side-banner a h3 {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          font-weight: 100;
-          font-size: 20px;
-          margin: 0;
-          padding: 3px; }
-        .wraper .top-left .side-banner a span {
-          margin-left: 93%; }
+
+a.pointing-link {
+  width: 100%;
+  color: #056cb6;
+  border: 1px solid #b4b3b5; }
+  a.pointing-link h3 {
+    font-weight: 100;
+    font-size: 20px;
+    margin: 0;
+    padding: 3px;
+    display: flow-root; }
+  a.pointing-link span {
+    float: right; }
+
+.top-right {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 0.5em; }
+  .top-right div {
+    display: grid;
+    grid-template-columns: 1fr; }
+  .top-right a {
+    padding: 6px 15px;
+    background-color: white;
+    border-top: none; }
+  .top-right a:hover {
+    background-color: #eaeaea; }
+  .top-right .info .grey h3 {
+    font-weight: 600;
+    font-size: 15px; }
+  .top-right h2 {
+    margin-bottom: 0;
+    border: 1px solid #727272;
+    background-color: #727272;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 200;
+    padding: 6px 15px; }
+  .top-right div.info a {
+    border: 1px solid #727272;
+    border-radius: 5px;
+    background-color: #eaeaea;
+    color: #020202; }
+  .top-right .dates h2 {
+    color: #fff;
+    background-color: #056cb6;
+    border: none; }
+  .top-right .dates .list a {
+    display: grid;
+    grid-template-columns: 1fr 1fr 4fr;
+    text-align: center;
+    background-color: transparent;
+    border-bottom: 1px solid #b4b3b5;
+    color: #020202; }
+    .top-right .dates .list a .col-1 {
+      font-weight: 600; }
+    .top-right .dates .list a .col-3 {
+      display: flex; }
+  .top-right .dates .list a:hover {
+    background-color: #eaeaea;
+    color: #0076b6; }
+
+.bottom-left {
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 1.4em; }
+  .bottom-left img {
+    display: none; }
+  .bottom-left div.box {
+    border-top: 1px solid #b4b3b5; }
+    .bottom-left div.box .article div {
+      margin-top: 1em;
+      margin-bottom: 0.5em;
+      font-size: 12px; }
+    .bottom-left div.box .article a {
+      font-size: 20px;
+      font-weight: 600;
+      color: #0076b6; }
+    .bottom-left div.box .article p {
+      color: #020202; }
+  .bottom-left .button {
+    float: right;
+    margin-top: 1.4em; }
+    .bottom-left .button a {
+      color: #fff;
+      font-weight: 600;
+      background-color: #056cb6;
+      border: 1px solid #056cb6;
+      border-radius: 5px;
+      padding: 5px 30px; }
+
+.bottom-right {
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 1.4em; }
+  .bottom-right img {
+    width: 100%;
+    padding: 10px; }
+  .bottom-right .university-message {
+    border: 1px solid #b4b3b5;
+    border-radius: 5px; }
+    .bottom-right .university-message h3 {
+      margin: 0;
+      padding: 10px;
+      background-color: #eaeaea;
+      border-bottom: 1px solid #b4b3b5; }
+
+@media (min-width: 800px) {
+  .site-banner .site-banner__left {
+    margin-left: 5%; }
+  .site-banner .site-banner__right {
+    margin-right: 5%; }
+  .site-banner .site-banner__bottom {
+    text-align: start; }
+
+  .wraper {
+    width: 95%;
+    margin: 0 auto;
+    grid-template-columns: 2fr 1fr; }
+    .wraper .top-left .side-banner {
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 0.5em;
+      margin-top: 0.5em; }
+    .wraper .top-right .links h2 {
+      margin-top: 0.5em; }
+    .wraper .bottom-left .box {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      column-gap: 1em;
+      padding-top: 2em; }
+      .wraper .bottom-left .box .article div {
+        margin-top: 0; }
+    .wraper .bottom-left img {
+      display: block;
+      margin: 0 auto; } }
 
 /*# sourceMappingURL=styles.css.map */
